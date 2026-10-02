@@ -7,8 +7,8 @@ func makeInvoicePDF(doc: InvoiceDocument, business: BusinessProfile,
                     clientName: String, clientEmail: String) -> URL? {
     let t = docTotals(of: doc)
     let page = CGRect(x: 0, y: 0, width: 612, height: 792) // US Letter
-    let fmt = UIGraphicsPDFRendererFormat()
-    let renderer = UIGraphicsPDFRenderer(bounds: page, format: fmt)
+    let rendererFormat = UIGraphicsPDFRendererFormat()
+    let renderer = UIGraphicsPDFRenderer(bounds: page, format: rendererFormat)
 
     let template = business.template
     // Template palette (flat Wise colors)
