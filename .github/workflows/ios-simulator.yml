@@ -18,6 +18,13 @@ jobs:
       - name: Build iOS Simulator app
         run: |
           xcodebuild -project QuickSend.xcodeproj -scheme QuickSend -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build CODE_SIGNING_ALLOWED=NO ARCHS=arm64 ONLY_ACTIVE_ARCH=NO build
+      - name: Verify app launches in iOS Simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(v["udid"] for devices in d["devices"].values() for v in devices if v["name"].startswith("iPhone")))')
+          xcrun simctl boot "$DEVICE_ID"
+          xcrun simctl bootstatus "$DEVICE_ID" -b
+          xcrun simctl install "$DEVICE_ID" build/Build/Products/Debug-iphonesimulator/QuickSend.app
+          xcrun simctl launch "$DEVICE_ID" com.quicksend.app
       - name: Package simulator app
         run: |
           test -f build/Build/Products/Debug-iphonesimulator/QuickSend.app/QuickSend
