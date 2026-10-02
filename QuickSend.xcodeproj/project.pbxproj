@@ -142,57 +142,65 @@
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "DataStore.swift";
-			sourceTree = "<group>";
+			name = "DataStore.swift";
+			path = "QuickSend/Store/DataStore.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		221661C2EFFA10EFD9394EAA /* MoreView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "MoreView.swift";
-			sourceTree = "<group>";
+			name = "MoreView.swift";
+			path = "QuickSend/Views/Main/MoreView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		266E4FAB419CB62D0F97CF5A /* WiseComponents.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "WiseComponents.swift";
-			sourceTree = "<group>";
+			name = "WiseComponents.swift";
+			path = "QuickSend/Components/WiseComponents.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		29D559AD93193C50C8FC9F42 /* ReceiptOCR.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ReceiptOCR.swift";
-			sourceTree = "<group>";
+			name = "ReceiptOCR.swift";
+			path = "QuickSend/Utils/ReceiptOCR.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		2FE32A6997AA1AA18D03B491 /* SettingsView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "SettingsView.swift";
-			sourceTree = "<group>";
+			name = "SettingsView.swift";
+			path = "QuickSend/Views/Settings/SettingsView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		3276B29B655BBD8A1CD07382 /* Formatters.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "Formatters.swift";
-			sourceTree = "<group>";
+			name = "Formatters.swift";
+			path = "QuickSend/Utils/Formatters.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		351E030DCB1F630373EBF63E /* DocPreviewView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "DocPreviewView.swift";
-			sourceTree = "<group>";
+			name = "DocPreviewView.swift";
+			path = "QuickSend/Views/Docs/DocPreviewView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		380C5EE18EE49C7EE313A4EC /* Notify.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "Notify.swift";
-			sourceTree = "<group>";
+			name = "Notify.swift";
+			path = "QuickSend/Utils/Notify.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		4254C8413C439A174FB02D64 /* Info.plist */ = {
 			isa = PBXFileReference;
@@ -205,78 +213,89 @@
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "CatalogItemEditorView.swift";
-			sourceTree = "<group>";
+			name = "CatalogItemEditorView.swift";
+			path = "QuickSend/Views/Items/CatalogItemEditorView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		4F4112AFDAC18377B1DD09F3 /* WiseTheme.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "WiseTheme.swift";
-			sourceTree = "<group>";
+			name = "WiseTheme.swift";
+			path = "QuickSend/Theme/WiseTheme.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		61E407A4F5B1DBFE97564FDE /* OnboardingView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "OnboardingView.swift";
-			sourceTree = "<group>";
+			name = "OnboardingView.swift";
+			path = "QuickSend/Views/Onboarding/OnboardingView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		6E7C4E9BC9E2492B01EBA03B /* QRCode.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "QRCode.swift";
-			sourceTree = "<group>";
+			name = "QRCode.swift";
+			path = "QuickSend/Utils/QRCode.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		8CB643376D10AA9E6ACCD377 /* DocEditorView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "DocEditorView.swift";
-			sourceTree = "<group>";
+			name = "DocEditorView.swift";
+			path = "QuickSend/Views/Docs/DocEditorView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		943566E34E81157E8DF5F35E /* ClientListView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ClientListView.swift";
-			sourceTree = "<group>";
+			name = "ClientListView.swift";
+			path = "QuickSend/Views/Clients/ClientListView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		956315325E134ABB31044B9E /* ClientDetailView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ClientDetailView.swift";
-			sourceTree = "<group>";
+			name = "ClientDetailView.swift";
+			path = "QuickSend/Views/Clients/ClientDetailView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		98A0E88EBC371120B5E5F93D /* ClientEditorView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ClientEditorView.swift";
-			sourceTree = "<group>";
+			name = "ClientEditorView.swift";
+			path = "QuickSend/Views/Clients/ClientEditorView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		A969D96DC801C419A23174F1 /* Models.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "Models.swift";
-			sourceTree = "<group>";
+			name = "Models.swift";
+			path = "QuickSend/Models.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		AE34131B9CDA900984295DE3 /* ReportsView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ReportsView.swift";
-			sourceTree = "<group>";
+			name = "ReportsView.swift";
+			path = "QuickSend/Views/Reports/ReportsView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		AE7133E557ABC31B55969CD1 /* DocsListView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "DocsListView.swift";
-			sourceTree = "<group>";
+			name = "DocsListView.swift";
+			path = "QuickSend/Views/Docs/DocsListView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		B6D97776838868B8A48D318A /* Assets.xcassets */ = {
 			isa = PBXFileReference;
@@ -289,71 +308,81 @@
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "DocDetailView.swift";
-			sourceTree = "<group>";
+			name = "DocDetailView.swift";
+			path = "QuickSend/Views/Docs/DocDetailView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		C10B0757332255FEF268B354 /* SignatureView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "SignatureView.swift";
-			sourceTree = "<group>";
+			name = "SignatureView.swift";
+			path = "QuickSend/Views/Docs/SignatureView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		C1D095C1EE4EC4A3F4BD60CF /* NotificationsView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "NotificationsView.swift";
-			sourceTree = "<group>";
+			name = "NotificationsView.swift";
+			path = "QuickSend/Views/Settings/NotificationsView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		C4D98BAF57A0CB8F94A1D270 /* CSVExport.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "CSVExport.swift";
-			sourceTree = "<group>";
+			name = "CSVExport.swift";
+			path = "QuickSend/Utils/CSVExport.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		C9B0C48390951E51FD14001A /* RecordPaymentView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "RecordPaymentView.swift";
-			sourceTree = "<group>";
+			name = "RecordPaymentView.swift";
+			path = "QuickSend/Views/Docs/RecordPaymentView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		D7330D05A417B9EE485EA9FE /* MainTabView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "MainTabView.swift";
-			sourceTree = "<group>";
+			name = "MainTabView.swift";
+			path = "QuickSend/Views/Main/MainTabView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		E072A0BEA764DDDD5DE7F83D /* ExpenseEditorView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ExpenseEditorView.swift";
-			sourceTree = "<group>";
+			name = "ExpenseEditorView.swift";
+			path = "QuickSend/Views/Expenses/ExpenseEditorView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		E7B350FBC8964B651A97E5D6 /* PDFExport.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "PDFExport.swift";
-			sourceTree = "<group>";
+			name = "PDFExport.swift";
+			path = "QuickSend/Utils/PDFExport.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		EE02312E914B1010BC7FB3AA /* BusinessEditorView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "BusinessEditorView.swift";
-			sourceTree = "<group>";
+			name = "BusinessEditorView.swift";
+			path = "QuickSend/Views/Settings/BusinessEditorView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		F3099229CAA7D3FC38440D29 /* CatalogView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "CatalogView.swift";
-			sourceTree = "<group>";
+			name = "CatalogView.swift";
+			path = "QuickSend/Views/Items/CatalogView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		F41428018C8B943BC26EC784 /* QuickSend.app */ = {
 			isa = PBXFileReference;
@@ -365,15 +394,17 @@
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "QuickSendApp.swift";
-			sourceTree = "<group>";
+			name = "QuickSendApp.swift";
+			path = "QuickSend/QuickSendApp.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 		F9262C0B73825A8624799980 /* ExpenseListView.swift */ = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = "ExpenseListView.swift";
-			sourceTree = "<group>";
+			name = "ExpenseListView.swift";
+			path = "QuickSend/Views/Expenses/ExpenseListView.swift";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXFileReference section */
 
