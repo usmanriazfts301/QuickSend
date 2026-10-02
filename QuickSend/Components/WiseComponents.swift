@@ -142,9 +142,17 @@ struct EmptyState: View {
     @Environment(ThemeManager.self) private var theme
     let icon: String
     let title: String
-    let body: String
+    let message: String
     var actionTitle: String? = nil
     var action: (() -> Void)? = nil
+
+    init(icon: String, title: String, body: String, actionTitle: String? = nil, action: (() -> Void)? = nil) {
+        self.icon = icon
+        self.title = title
+        self.message = body
+        self.actionTitle = actionTitle
+        self.action = action
+    }
 
     var body: some View {
         VStack(spacing: 14) {
@@ -154,7 +162,7 @@ struct EmptyState: View {
                 .frame(width: 72, height: 72)
                 .background(theme.colors.canvas, in: RoundedRectangle(cornerRadius: 10))
             Text(title).font(.title3).fontWeight(.bold)
-            Text(body).font(.subheadline)
+            Text(message).font(.subheadline)
                 .foregroundStyle(theme.colors.textSecondary)
                 .multilineTextAlignment(.center)
             if let actionTitle, let action {
