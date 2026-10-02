@@ -1,0 +1,29 @@
+name: Build QuickSend for Appetize
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'QuickSend/**'
+      - 'QuickSend.xcodeproj/**'
+      - '.github/workflows/ios-simulator.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build iOS Simulator app
+        run: |
+          xcodebuild -project QuickSend.xcodeproj -scheme QuickSend -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build CODE_SIGNING_ALLOWED=NO ARCHS=arm64 ONLY_ACTIVE_ARCH=NO build
+      - name: Package simulator app
+        run: |
+          test -f build/Build/Products/Debug-iphonesimulator/QuickSend.app/QuickSend
+          ditto -c -k --sequesterRsrc --keepParent build/Build/Products/Debug-iphonesimulator/QuickSend.app QuickSend-Appetize.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QuickSend-Appetize
+          path: QuickSend-Appetize.zip
+          retention-days: 14
