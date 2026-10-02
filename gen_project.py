@@ -97,7 +97,12 @@ def main():
             group_ids[d] = uid(f"group:{d}")
         return group_ids[d]
 
-    dirs = {os.path.dirname(s) for s in sources} | {APP_DIR}
+    dirs = {APP_DIR}
+    for source in sources:
+        parent = os.path.dirname(source)
+        while parent and parent != APP_DIR:
+            dirs.add(parent)
+            parent = os.path.dirname(parent)
     for d in sorted(dirs):
         group_for(d)
 
@@ -159,7 +164,7 @@ def main():
         for s in subs:
             kids.append((group_ids[s], os.path.basename(s)))
         name = os.path.basename(d) if d != APP_DIR else "QuickSend"
-        pbx.add("PBXGroup", group_ids[d], name, group_body(name, kids, "QuickSend" if d == APP_DIR else None))
+        pbx.add("PBXGroup", group_ids[d], name, group_body(name, kids, os.path.basename(d)))
 
     pbx.add("PBXGroup", main_group_id, None,
             group_body(None, [(app_group_id, "QuickSend"), (products_group_id, "Products")]))
@@ -209,6 +214,9 @@ def main():
         "CLANG_ENABLE_MODULES": "YES",
         "COPY_PHASE_STRIP": "NO",
         "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "SDKROOT": "iphoneos",
+        "SUPPORTED_PLATFORMS": q("iphoneos iphonesimulator"),
+        "SUPPORTS_MACCATALYST": "NO",
         "ONLY_ACTIVE_ARCH": "YES",
         "SWIFT_VERSION": "5.0",
         "TARGETED_DEVICE_FAMILY": q("1,2"),
@@ -230,7 +238,7 @@ def main():
             "LD_RUNPATH_SEARCH_PATHS": q("$(inherited) @executable_path/Frameworks"),
             "MARKETING_VERSION": "1.0",
             "PRODUCT_BUNDLE_IDENTIFIER": "com.quicksend.app",
-            "PRODUCT_NAME": "$(TARGET_NAME)",
+            "PRODUCT_NAME": q("$(TARGET_NAME)"),
             "SWIFT_EMIT_LOC_STRINGS": "YES",
             "SWIFT_STRICT_CONCURRENCY": "complete",
         })
