@@ -14,6 +14,8 @@ struct DocEditorView: View {
 
     @State private var message: String? = nil
     @State private var showClientPicker = false
+    @State private var newClientName = ""
+    @State private var newClientEmail = ""
     @State private var showItemPicker = false
     @State private var showSignature = false
     @State private var showPreview = false
@@ -21,7 +23,7 @@ struct DocEditorView: View {
     @State private var photoItems: [PhotosPickerItem] = []
 
     init(doc: InvoiceDocument? = nil) {
-        _draft = State(initialValue: doc ?? InvoiceDocument())
+        _draft = State(initialValue: doc ?? InvoiceDocument(type: .invoice, number: "", clientId: nil))
         _isNew = State(initialValue: doc == nil)
     }
 
@@ -558,7 +560,7 @@ struct DocEditorView: View {
     private func importPhotos(_ items: [PhotosPickerItem]) {
         for item in items {
             Task {
-                guard let data = try? await item.loadTransferable(type: Data.self) else { continue }
+                guard let data = try? await item.loadTransferable(type: Data.self) else { return }
                 await MainActor.run {
                     if let name = store.saveImageData(data) {
                         draft.photoNames.append(name)
