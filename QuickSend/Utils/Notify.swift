@@ -19,7 +19,7 @@ enum Notify {
     /// Schedules a morning reminder for each overdue invoice (one per doc, idempotent by identifier).
     static func scheduleOverdueReminders(for docs: [InvoiceDocument], totals: (InvoiceDocument) -> DocTotals) {
         let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: docs.map { "overdue-\($0.id}" })
+        center.removePendingNotificationRequests(withIdentifiers: docs.map { "overdue-\($0.id)" })
         let startOfToday = Calendar.current.startOfDay(for: Date())
         for d in docs where d.type == .invoice && d.status == .sent && d.dueDate < startOfToday {
             let t = totals(d)
